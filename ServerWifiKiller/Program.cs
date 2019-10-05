@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
@@ -15,6 +15,8 @@ namespace ServerWifiKiller
 
         [DllImport("Kernel32")]
         private static extern IntPtr GetConsoleWindow();
+
+
 
         const int SW_HIDE = 0;
         const int SW_SHOW = 5;
@@ -43,8 +45,8 @@ namespace ServerWifiKiller
                         Process.Start("ipconfig", "/release");
                         Console.WriteLine("Killed Wifi on {0}\n\n\n",DateTime.Now.ToString());
                         done = true;
-                        Console.WriteLine("Press anywhere to turn wifi back on...");
-                        ConsoleKeyInfo input = Console.ReadKey();
+                        Console.WriteLine("Press Enter to turn wifi back on...");
+                        Console.ReadLine();
                         Process.Start("ipconfig", "/renew");
                         Console.WriteLine("Toggled Wifi On\n\n\n\n");
                     }
@@ -62,6 +64,7 @@ namespace ServerWifiKiller
             {
                 hwnd = GetConsoleWindow();
                 ShowWindow(hwnd, SW_HIDE);
+                
                 StartServer();
             }
         }
