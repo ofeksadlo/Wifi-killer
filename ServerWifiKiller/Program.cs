@@ -13,10 +13,17 @@ namespace ServerWifiKiller
         [DllImport("user32.dll")]
         static extern bool ShowWindow(IntPtr hWnd, int nCmdShow);//Here we are tracking down the console window and hiding it.
 
-        [DllImport("Kernel32")]
-        private static extern IntPtr GetConsoleWindow();
+        [DllImport("kernel32.dll", ExactSpelling = true)]
+        public static extern IntPtr GetConsoleWindow();
 
+        [DllImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        public static extern bool SetForegroundWindow(IntPtr hWnd);
 
+        public void BringConsoleToFront()
+        {
+            SetForegroundWindow(GetConsoleWindow());
+        }
 
         const int SW_HIDE = 0;
         const int SW_SHOW = 5;
