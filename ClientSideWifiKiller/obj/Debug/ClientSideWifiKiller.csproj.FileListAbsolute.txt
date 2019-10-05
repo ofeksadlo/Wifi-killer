@@ -1,0 +1,12 @@
+D:\Users\ofeky\source\repos\WindowsFormsApp1\ClientSideWifiKiller\obj\Debug\gaverProject.WifiKiller.resources
+D:\Users\ofeky\source\repos\WindowsFormsApp1\ClientSideWifiKiller\obj\Debug\gaverProject.Properties.Resources.resources
+D:\Users\ofeky\source\repos\WindowsFormsApp1\ClientSideWifiKiller\obj\Debug\ClientSideWifiKiller.csproj.GenerateResource.cache
+D:\Users\ofeky\source\repos\WindowsFormsApp1\ClientSideWifiKiller\obj\Debug\gaverProject.exe
+D:\Users\ofeky\source\repos\WindowsFormsApp1\ClientSideWifiKiller\obj\Debug\gaverProject.pdb
+D:\Users\ofeky\source\repos\WindowsFormsApp1\ClientSideWifiKiller\bin\Debug\gaverProject.exe.config
+D:\Users\ofeky\source\repos\WindowsFormsApp1\ClientSideWifiKiller\bin\Debug\gaverProject.exe.manifest
+D:\Users\ofeky\source\repos\WindowsFormsApp1\ClientSideWifiKiller\bin\Debug\gaverProject.application
+D:\Users\ofeky\source\repos\WindowsFormsApp1\ClientSideWifiKiller\bin\Debug\gaverProject.exe
+D:\Users\ofeky\source\repos\WindowsFormsApp1\ClientSideWifiKiller\bin\Debug\gaverProject.pdb
+D:\Users\ofeky\source\repos\WindowsFormsApp1\ClientSideWifiKiller\obj\Debug\gaverProject.exe.manifest
+D:\Users\ofeky\source\repos\WindowsFormsApp1\ClientSideWifiKiller\obj\Debug\gaverProject.application
