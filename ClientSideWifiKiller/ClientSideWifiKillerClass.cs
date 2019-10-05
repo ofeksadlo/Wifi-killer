@@ -12,7 +12,7 @@ namespace gaverProject
         //This is the client of the wifi killer.
         //It's goal is to send a command the server in order to kill the wifi.
         int messageSeconds = 2;// The number of seconds the message will appear when a voice command executed.
-        int calledSeconds = 10;
+        int calledSeconds = 10;// The number of seconds the program is listening for your voice command.
         Choices commands = new Choices();
 
         private static void ShowErrorDialog(string message)
