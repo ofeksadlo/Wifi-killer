@@ -8,5 +8,5 @@ once you're done with your game. You will find on the laptop a console. On that
 console a click on any button will toggle the wifi back on.
 # Why I made it:
 I made this program because I download on the laptop movies. And most of the times just forgot about it.
-While starting a match on CS:GO noticing my high ping. And the having to go mid game to turn off
-wifi.
+While starting a match on CS:GO noticing my high ping. And then having to go mid game to turn off
+wifi really pissed me off. So I decided to create this little program.
