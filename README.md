@@ -1,5 +1,5 @@
 # Wifi-killer
-Shutdown wifi on the laptop from your main pc.
+Shutdown wifi on the laptop from your main pc using voice command.
 # What it does:
 You start an online game and you noticed you have a high ping.
 Oops you forgot to turn off the wifi on your laptop. Using this program
