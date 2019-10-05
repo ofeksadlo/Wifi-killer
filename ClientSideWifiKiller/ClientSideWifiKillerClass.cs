@@ -12,6 +12,7 @@ namespace gaverProject
         //This is the client of the wifi killer.
         //It's goal is to send a command the server in order to kill the wifi.
         int messageSeconds = 2;// The number of seconds the message will appear when a voice command executed.
+        int calledSeconds = 10;
         Choices commands = new Choices();
 
         private static void ShowErrorDialog(string message)
@@ -76,7 +77,7 @@ namespace gaverProject
         Grammar grammar;
         private void gaver_Load(object sender, EventArgs e)
         {
-            commands.Add(new string[] { "laptop off", "ten status" });//Initiziling commands.
+            commands.Add(new string[] { "caabe wifi", "akshev", "titabed" });//Initiziling commands.
             gBuilder = new GrammarBuilder();
             gBuilder.Append(commands);
             grammar = new Grammar(gBuilder);
@@ -86,40 +87,58 @@ namespace gaverProject
             recEngine.SpeechRecognized += RecEngine_SpeechRecognized;
             recEngine.RecognizeAsync(RecognizeMode.Multiple);
         }
-        bool flag = false;
+        bool programCalled = false;
         private void RecEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             switch (e.Result.Text)
             {
-                case "laptop off":
-                    if(flag)
+                case "caabe wifi":
+                    if(programCalled)
                     {
                         label1.Text = "מכבה אינטרנט בלפטופ";// "מכבה אינטרנט בלפטופ" means in hebrew - toggling off internet on the laptop.
                         this.Opacity = 100;
                         killWifi();
-                        timer.Start();
-                        flag = false;
+                        messageTimer.Start();
+                        programCalled = false;
                     }
                     break;
-                case "ten status":// "תן סטאטוס" means in hebrew - report status.
-                    label1.Text = "פועל ומאזין";// "פועל ומאזין" means in hebrew - on and listening.
-                    flag = true;
+                case "akshev":// "ekshev" means in hebrew - report status.
+                    label1.Text = "דבר אליי";// "דבר אליי" means in hebrew - listening.
+                    programCalled = true;
                     this.Opacity = 100;
                     this.ShowInTaskbar = true;
-                    timer.Start();
+                    messageTimer.Start();
+                    break;
+                case "titabed":// "titabed" means in hebrew - kill yourself.
+                    if (programCalled)
+                    {
+                        label1.Text = "מתאבד";// "מתאבד" means in hebrew - killing myself.
+                        this.Opacity = 100;
+                        Application.Exit();
+                    }
                     break;
 
             }
         }
-        private void timer_Tick(object sender, EventArgs e)
+        private void messageTimer_Tick(object sender, EventArgs e)
         {
             messageSeconds--;
             if (messageSeconds <= 0)
             {
+
                 this.Opacity = 0;
                 messageSeconds = 2;
                 this.ShowInTaskbar = false;
-                timer.Stop();
+                messageTimer.Stop();
+            }
+        }
+
+        private void calledTimer_Tick(object sender, EventArgs e)
+        {
+            calledSeconds--;
+            if(calledSeconds <=0)
+            {
+                programCalled = false;
             }
         }
     }
