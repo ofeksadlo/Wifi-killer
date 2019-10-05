@@ -77,7 +77,7 @@ namespace gaverProject
         Grammar grammar;
         private void gaver_Load(object sender, EventArgs e)
         {
-            commands.Add(new string[] { "caabe wifi", "akshev", "titabed" });//Initiziling commands.
+            commands.Add(new string[] { "kaabe wifi", "aakshev", "titabed" });//Initiziling commands.
             gBuilder = new GrammarBuilder();
             gBuilder.Append(commands);
             grammar = new Grammar(gBuilder);
@@ -92,18 +92,18 @@ namespace gaverProject
         {
             switch (e.Result.Text)
             {
-                case "caabe wifi":
+                case "kaabe wifi":
                     if(programCalled)
                     {
-                        label1.Text = "מכבה אינטרנט בלפטופ";// "מכבה אינטרנט בלפטופ" means in hebrew - toggling off internet on the laptop.
+                        label.Text = "מכבה אינטרנט בלפטופ";// "מכבה אינטרנט בלפטופ" means in hebrew - toggling off internet on the laptop.
                         this.Opacity = 100;
                         killWifi();
                         messageTimer.Start();
                         programCalled = false;
                     }
                     break;
-                case "akshev":// "ekshev" means in hebrew - report status.
-                    label1.Text = "דבר אליי";// "דבר אליי" means in hebrew - listening.
+                case "aakshev":// "ekshev" means in hebrew - report status.
+                    label.Text = "דבר אליי";// "דבר אליי" means in hebrew - listening.
                     programCalled = true;
                     this.Opacity = 100;
                     this.ShowInTaskbar = true;
@@ -112,9 +112,10 @@ namespace gaverProject
                 case "titabed":// "titabed" means in hebrew - kill yourself.
                     if (programCalled)
                     {
-                        label1.Text = "מתאבד";// "מתאבד" means in hebrew - killing myself.
+                        label.Text = "מתאבד";// "מתאבד" means in hebrew - killing myself.
+                        messageTimer.Start();
                         this.Opacity = 100;
-                        Application.Exit();
+                        killSelfTimer.Start();
                     }
                     break;
 
@@ -125,7 +126,6 @@ namespace gaverProject
             messageSeconds--;
             if (messageSeconds <= 0)
             {
-
                 this.Opacity = 0;
                 messageSeconds = 2;
                 this.ShowInTaskbar = false;
@@ -139,6 +139,15 @@ namespace gaverProject
             if(calledSeconds <=0)
             {
                 programCalled = false;
+            }
+        }
+
+        private void killSelfTimer_Tick(object sender, EventArgs e)
+        {
+            messageSeconds--;
+            if (messageSeconds <= 0)
+            {
+                Application.Exit();
             }
         }
     }
