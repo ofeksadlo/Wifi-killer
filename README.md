@@ -18,4 +18,4 @@ And in order to close the server just enter some text before you press enter. An
 # Why I made it:
 I made this program because I download on the laptop movies. And most of the times just forgot about it.
 While starting a match on CS:GO noticing my high ping. And then having to go mid game to turn off
-wifi really pissed me off. So I decided to create this little program.
+the wifi really pissed me off. So I decided to create this little program.
