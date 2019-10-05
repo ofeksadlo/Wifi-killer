@@ -52,8 +52,13 @@ namespace ServerWifiKiller
                         Process.Start("ipconfig", "/release");
                         Console.WriteLine("Killed Wifi on {0}\n\n\n",DateTime.Now.ToString());
                         done = true;
-                        Console.WriteLine("Press Enter to turn wifi back on...");
-                        Console.ReadLine();
+                        Console.WriteLine("Press Enter to turn wifi back on...(add text before you press enter in order to close the server).");
+                        string input = Console.ReadLine();
+                        if(input != "")
+                        {
+                            Process.Start("ipconfig", "/renew");
+                            Environment.Exit(0);
+                        }
                         Process.Start("ipconfig", "/renew");
                         Console.WriteLine("Toggled Wifi On\n\n\n\n");
                     }
