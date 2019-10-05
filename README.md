@@ -13,7 +13,7 @@ It's not really closed only hidden. Now open the client on your main pc.
 And when you say "akshev" (In hebrew means - "listen") and then "cabe wifi" (In hebrew means - "turn off wifi") the wifi on your laptop will toggle off.
 That's all you need to make it work.
  
- And in order to close off the client side just say "titabed" (In hebrew means - "kill yourself")
+ And in order to close the client just say "titabed" (In hebrew means - "kill yourself").
 # Why I made it:
 I made this program because I download on the laptop movies. And most of the times just forgot about it.
 While starting a match on CS:GO noticing my high ping. And then having to go mid game to turn off
