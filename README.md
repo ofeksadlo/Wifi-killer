@@ -8,7 +8,7 @@ once you're done with your game. You will find on the laptop a console. On that
 console a click on Enter will toggle the wifi back on.
 # How to use it:
 Make sure you set the ip address of your laptop on the client side.
-Run the server on the laptop you will see a console open and then closes.
+Run the server on the laptop you will see a console opens and then closes.
 It's not really closed only hidden. Now open the client on your main pc.
 And when you say "akshev" (In hebrew means - "listen") and then "cabe wifi" (In hebrew means - "turn off wifi") the wifi on your laptop will toggle off.
 That's all you need to make it work.
