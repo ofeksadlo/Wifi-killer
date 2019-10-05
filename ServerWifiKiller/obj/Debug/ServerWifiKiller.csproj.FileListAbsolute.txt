@@ -1,0 +1,5 @@
+C:\Users\ofeky\source\repos\ServerWifiKiller\ServerWifiKiller\bin\Debug\ServerWifiKiller.exe.config
+C:\Users\ofeky\source\repos\ServerWifiKiller\ServerWifiKiller\bin\Debug\ServerWifiKiller.exe
+C:\Users\ofeky\source\repos\ServerWifiKiller\ServerWifiKiller\bin\Debug\ServerWifiKiller.pdb
+C:\Users\ofeky\source\repos\ServerWifiKiller\ServerWifiKiller\obj\Debug\ServerWifiKiller.exe
+C:\Users\ofeky\source\repos\ServerWifiKiller\ServerWifiKiller\obj\Debug\ServerWifiKiller.pdb
