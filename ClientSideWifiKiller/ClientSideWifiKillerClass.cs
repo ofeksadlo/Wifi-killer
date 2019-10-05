@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Speech.Recognition;
-using System.Diagnostics;
-using System.Net.Sockets;
+using System;
 using System.Net;
-using System.Threading;
+using System.Net.Sockets;
+using System.Speech.Recognition;
+using System.Text;
+using System.Windows.Forms;
 
 namespace gaverProject
 {
@@ -84,7 +76,7 @@ namespace gaverProject
         Grammar grammar;
         private void gaver_Load(object sender, EventArgs e)
         {
-            commands.Add(new string[] { "laptop off","ten status" });//Initiziling commands.
+            commands.Add(new string[] { "laptop off", "ten status" });//Initiziling commands.
             gBuilder = new GrammarBuilder();
             gBuilder.Append(commands);
             grammar = new Grammar(gBuilder);
@@ -94,18 +86,24 @@ namespace gaverProject
             recEngine.SpeechRecognized += RecEngine_SpeechRecognized;
             recEngine.RecognizeAsync(RecognizeMode.Multiple);
         }
+        bool flag = false;
         private void RecEngine_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
             switch (e.Result.Text)
             {
                 case "laptop off":
-                    label1.Text = "מכבה אינטרנט בלפטופ";// "מכבה אינטרנט בלפטופ" means in hebrew - toggling off internet on the laptop.
-                    this.Opacity = 100;
-                    killWifi();
-                    timer.Start();
+                    if(flag)
+                    {
+                        label1.Text = "מכבה אינטרנט בלפטופ";// "מכבה אינטרנט בלפטופ" means in hebrew - toggling off internet on the laptop.
+                        this.Opacity = 100;
+                        killWifi();
+                        timer.Start();
+                        flag = false;
+                    }
                     break;
                 case "ten status":// "תן סטאטוס" means in hebrew - report status.
                     label1.Text = "פועל ומאזין";// "פועל ומאזין" means in hebrew - on and listening.
+                    flag = true;
                     this.Opacity = 100;
                     this.ShowInTaskbar = true;
                     timer.Start();
