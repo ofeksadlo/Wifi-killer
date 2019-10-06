@@ -77,7 +77,7 @@ namespace gaverProject
         Grammar grammar;
         private void gaver_Load(object sender, EventArgs e)
         {
-            commands.Add(new string[] { "kaabe wifi", "aakshev", "titabed" });//Initiziling commands.
+            commands.Add(new string[] { "kaabe wifi", "aakshev", "teetabad" });//Initiziling commands.
             gBuilder = new GrammarBuilder();
             gBuilder.Append(commands);
             grammar = new Grammar(gBuilder);
@@ -106,14 +106,15 @@ namespace gaverProject
                     label.Text = "דבר אליי";// "דבר אליי" means in hebrew - listening.
                     programCalled = true;
                     this.Opacity = 100;
-                    this.ShowInTaskbar = true;
                     messageTimer.Start();
+                    this.ShowInTaskbar = true;
+                    calledTimer.Start();
                     break;
-                case "titabed":// "titabed" means in hebrew - kill yourself.
+                case "teetabad":// "teetabad" means in hebrew - kill yourself.
                     if (programCalled)
                     {
                         label.Text = "מתאבד";// "מתאבד" means in hebrew - killing myself.
-                        messageTimer.Start();
+                        //messageTimer.Start();
                         this.Opacity = 100;
                         killSelfTimer.Start();
                     }
@@ -139,6 +140,7 @@ namespace gaverProject
             if(calledSeconds <=0)
             {
                 programCalled = false;
+                calledTimer.Stop();
             }
         }
 
