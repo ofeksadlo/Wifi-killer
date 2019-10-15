@@ -27,7 +27,7 @@ namespace gaverProject
             Socket sending_socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram,
             ProtocolType.Udp);
 
-            IPAddress send_to_address =  IPAddress send_to_address = Dns.GetHostEntry("LAPTOP-K41IRKQN").AddressList.Where(o => o.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork).First();//The ip address of the server
+            IPAddress send_to_address =  IPAddress send_to_address = Dns.GetHostEntry("ComputerName").AddressList.Where(o => o.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork).First();//The ip address of the server
 
             IPEndPoint sending_end_point = new IPEndPoint(send_to_address, 11000);//The port in the server thats listening is 11000.
             
