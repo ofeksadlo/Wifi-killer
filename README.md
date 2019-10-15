@@ -7,13 +7,13 @@ you can just say to your microphone "akshev" (In hebrew means - "listen") and th
 once you're done with your game. You will find on the laptop a console. On that
 console a click on Enter will toggle the wifi back on.
 # How to use it:
-Make sure you set the ip address of your laptop on the client side.
+Make sure you set the computer name of your laptop on the client side before building it.
 Run the server on the laptop you will see a console opens and then closes.
 It's not really closed only hidden. Now open the client on your main pc.
-And when you say "akshev" (In hebrew means - "listen") and then "cabe wifi" (In hebrew means - "turn off wifi") the wifi on your laptop will toggle off.
+And when you say "computer" and then "kill wifi" the wifi on your laptop will toggle off.
 That's all you need to make it work.
  
-In order to close the client just say "akshev" and then "titabed" (In hebrew means - "kill yourself").
+In order to close the client just say "computer" and then "stop".
 And in order to close the server just enter some text before you press enter. And it will close the server.
 # Why I made it:
 I made this program because I download on the laptop movies. And most of the times just forgot about it.
